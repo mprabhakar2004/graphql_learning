@@ -24,10 +24,12 @@ const typeDefs = `
     }
 
     type Query {
-        getFriend(id: ID): Friend
+        getFriend(id: ID!): Friend
     }
     type Mutation{
         createFriend(input: FriendInput): Friend
+        updateFriend(input: FriendInput): Friend
+        deleteFriend(id:ID!): String
     }
     input FriendInput{
         id: ID
